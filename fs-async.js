@@ -1,4 +1,4 @@
-const { readFile, writeFile, write } = require('fs')
+const { readFile, writeFile } = require('fs')
 
 readFile('./content/first.txt', 'utf8', (err, result) => {
     if (err) {
@@ -23,9 +23,11 @@ readFile('./content/first.txt', 'utf8', (err, result) => {
                     console.log(err)
                     return
                 }
-                console.log(result)
+                console.log('done with this task')
             }
         )
 
     })
 })
+
+console.log('starting next task')
